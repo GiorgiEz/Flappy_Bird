@@ -148,6 +148,7 @@ class Run:
         pygame.display.flip()
 
     def reset(self):
+        #helloooo
         self.bird = Bird(75, 350)
         self.obstacle = Obstacle()
 
