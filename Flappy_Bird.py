@@ -16,7 +16,8 @@ class Bird:
 
     def update(self):
         self.y -= self.speedY
-        self.speedY -= 0.011 #gravity
+        # gravity
+        self.speedY -= 0.011
 
 
 class Obstacle:
@@ -86,7 +87,8 @@ class Run:
             keys = pygame.key.get_pressed()
             if not pause:
                 if keys[pygame.K_SPACE] or pygame.mouse.get_pressed()[0]:
-                    self.bird.speedY = 1.6 #Jump height
+                    # Jump height
+                    self.bird.speedY = 1.6
             if keys[pygame.K_RETURN] or pygame.mouse.get_pressed()[0]:
                 if pause: score = 0
                 pause = False
@@ -135,12 +137,12 @@ class Run:
         self.reset()
 
     def scores(self):
-        font = pygame.font.SysFont('tahoma', 35)
+        font = pygame.font.SysFont('tah-oma', 35)
         scores = font.render(f"Score: {score}", True, 'black')
         self.screen.blit(scores, (10, 5))
 
     def game_over(self):
-        font = pygame.font.SysFont('tahoma', 25)
+        font = pygame.font.SysFont('tah-oma', 25)
         text = font.render(f"Click to play again or press Esc", True, "Black")
         self.screen.blit(text, (80, 300))
         pygame.display.flip()
