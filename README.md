@@ -1,2 +1,1 @@
-# Flappy_Bird
-Flappy bird
+# Flappy Bird
